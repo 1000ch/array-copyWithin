@@ -1,5 +1,5 @@
 {
-  "name": "array-copyWithin",
+  "name": "array-copywithin",
   "version": "1.0.0",
   "description": "Polyfill for Array.prototype.copyWithin",
   "main": "index.js",
