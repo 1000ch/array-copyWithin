@@ -1,0 +1,21 @@
+{
+  "name": "array-copyWithin",
+  "main": "index.js",
+  "homepage": "https://github.com/1000ch/array-copyWithin",
+  "authors": [
+    "1000ch <shogo.sensui@gmail.com>"
+  ],
+  "description": "Polyfill for Array.prototype.copyWithin",
+  "keywords": [
+    "array",
+    "polyfill"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
