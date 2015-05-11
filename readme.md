@@ -9,7 +9,7 @@ Polyfill for Array.prototype.copyWithin.
 Functionally:
 
 ```javascript
-var copyWithin = require('array-copyWithin');
+var copyWithin = require('array-copywithin');
 
 var array = copyWithin([1, 2, 3, 4, 5], 0, 3);
 
@@ -20,7 +20,7 @@ console.log(array);
 From Array object:
 
 ```javascript
-require('array-copyWithin');
+require('array-copywithin');
 
 var array = [1, 2, 3, 4, 5].copyWithin(0, 3);
 
