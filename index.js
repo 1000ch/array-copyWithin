@@ -1,29 +1,4 @@
-(function(root, arrayCopyWithin) {
-
-  if (typeof exports !== 'undefined') {
-
-    if (typeof module !== 'undefined' && module.exports) {
-      exports = module.exports = arrayCopyWithin;
-    }
-
-    exports.arrayCopyWithin = arrayCopyWithin;
-
-  } else if (typeof define === 'function' && define.amd) {
-
-    define([], function() {
-      return arrayCopyWithin;
-    });
-
-  }
-
-  if (!Array.prototype.copyWithin) {
-    Array.prototype.copyWithin = function(target, start, end) {
-      return arrayCopyWithin(this, target, start, end);
-    };
-  }
-
-})(this, function (array, target, start, end) {
-
+module.exports = function (array, target, start, end) {
   if (array == null) {
     throw new TypeError('this is null or undefined');
   }
@@ -67,4 +42,4 @@
   }
 
   return object;
-});
+};
