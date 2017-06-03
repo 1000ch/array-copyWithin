@@ -1,12 +1,10 @@
 module.exports = function (array, target, start, end) {
-  if (array == null) {
+  if (array === null || array === undefined) {
     throw new TypeError('this is null or undefined');
   }
 
   var object = Object(array);
-  // element (Array or Object) length
   var length = parseInt(object.length, 10);
-  // start position to copy
   var target = parseInt(target, 10);
 
   if (start === undefined) {
@@ -17,28 +15,28 @@ module.exports = function (array, target, start, end) {
     end = length;
   }
 
-  if (start < 0) {
-    start = length + start;
-  }
+  var to = target < 0 ? Math.max(length + target, 0) : Math.min(target, length);
+  var from = start < 0 ? Math.max(length + start, 0) : Math.min(start, length);
+  var last = end < 0 ? Math.max(length + end, 0) : Math.min(end, length);
+  var count = Math.min(last - from, length - to);
+  var direction = 1;
 
-  if (end < 0) {
-    end = length + end;
+  if (from < to && to < (from + count)) {
+    direction = -1;
+    from += count - 1;
+    to += count - 1;
   }
-
-  var reverse = start > end;
-  var count = (reverse ? start - end : end - start);
 
   while (count > 0) {
-
-    count--;
-    var from = !reverse ? start + count : end - count;
-    var to = !reverse ? target + count : target - count;
-
     if (from in object) {
       object[to] = object[from];
     } else {
-      delete[to];
+      delete object[to];
     }
+
+    from += direction;
+    to += direction;
+    count--;
   }
 
   return object;
