@@ -20,7 +20,7 @@ console.log(array);
 From Array object:
 
 ```javascript
-require('array-copywithin');
+require('array-copywithin/shim');
 
 var array = [1, 2, 3, 4, 5].copyWithin(0, 3);
 
@@ -30,4 +30,4 @@ console.log(array);
 
 ## License
 
-MIT: http://1000ch.mit-license.org
+[MIT](https://1000ch.mit-license.org) © [Shogo Sensui](https://github.com/1000ch)
