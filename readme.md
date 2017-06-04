@@ -4,6 +4,12 @@ Polyfill for Array.prototype.copyWithin.
 
 [![testling badge](https://ci.testling.com/1000ch/array-copyWithin.png)](https://ci.testling.com/1000ch/array-copyWithin)
 
+## Install
+
+```bash
+$ npm install --save-dev array-copywithin
+```
+
 ## Usage
 
 Functionally:
